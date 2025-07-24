@@ -1,0 +1,297 @@
+        /* this color idea is taken from the internet */
+        :root {
+            --matte-black: #1a1a1a;
+            --dark-matte: #2a2a2a;
+            --medium-matte: #3a3a3a;
+            --light-matte: #4a4a4a;
+            --cyan-accent: #00d4aa;
+            --cyan-hover: #00e6bb;
+            --red-accent: #ff4757;
+            --red-hover: #ff3742;
+            --orange-accent: #ffa502;
+            --orange-hover: #ff9500;
+            --text-light: #e0e0e0;
+            --text-muted: #888;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* header */
+
+        .navbar {
+            background: rgba(20, 20, 20, 0.98) !important;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--dark-matte);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .brand-text {
+            color: var(--cyan-accent) !important;
+            text-shadow: 0 0 10px rgba(0, 212, 170, 0.3);
+        }
+
+        .nav-link {
+            color: var(--text-light) !important;
+            transition: all 0.3 cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--cyan-accent) !important;
+            background: rgba(0, 212, 170, 0.1) !important;
+            transform: translateY(-1px);
+        }
+
+        .nav-link:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--cyan-accent);
+            transition: all 0.3 ease;
+            transform: translateX(-50%);
+
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* body styling starts here */
+        main {
+            background-color: #00d4aa;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* calulator styling */
+
+        .calculator-container {
+            background: var(--dark-matte) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid var(--medium-matte) !important;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .display-section {
+            background: #1e1e1e !important;
+            border-bottom: 1px solid var(--medium-matte) !important;
+        }
+
+        .display-main {
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--cyan-accent);
+            min-height: 70px;
+            line-height: 1.1;
+            text-shadow: 0 0 20px rgba(0, 212, 170, 0, 3);
+        }
+
+        .display-expression {
+            color: var(--text-muted);
+            font-size: 1rem;
+            min-height: 24px;
+            font-weight: 300;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* button styling */
+        .button-grid {
+            background: var(--dark-matte);
+        }
+
+        .calc-button {
+            height: 65px;
+            font-size: 1.2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            flex: 1 1 calc(25% - 4px) !important;
+            min-width: calc(25% - 4px);
+        }
+
+        .calc-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .calc-button:active {
+            transform: translateY(0);
+            transition: all 0.1s ease;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* number buttons */
+        .number-btn {
+            background: var(--medium-matte) !important;
+            color: var(--text-light) !important;
+            border: 1px solid var(--light-matte) !important;
+        }
+
+        .number-btn:hover {
+            background: var(--light-matte) !important;
+            color: var(--text-light) !important;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* operator buttons */
+        .operator-btn {
+            background: var(--cyan-accent) !important;
+            color: var(--matte-black) !important;
+        }
+
+        .operator-btn:hover {
+            background: var(--cyan-hover) !important;
+            color: var(--matte-black) !important;
+        }
+
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* function buttons */
+        .function-btn {
+            background: var(--light-matte) !important;
+            color: var(--text-light) !important;
+            border: 1px solid #5a5a5a !important;
+        }
+
+        .function-btn:hover {
+            background: #5a5a5a !important;
+            border-color: #6a6a6a !important;
+            color: var(--text-light) !important;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* Clear button */
+        .clear-btn {
+            background: var(--red-accent) !important;
+            color: #ffffff !important;
+        }
+
+        .clear-btn:hover {
+            background: var(--red-hover) !important;
+            box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+            color: #ffffff !important;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* Equals button */
+        .equals-btn {
+            background: var(--cyan-accent) !important;
+            color: var(--matte-black) !important;
+            font-size: 1.4rem !important;
+        }
+
+        .equals-btn:hover {
+            background: var(--cyan-hover) !important;
+            box-shadow: 0 8px 25px rgba(0, 212, 170, 0.5);
+            color: var(--matte-black) !important;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* Delete button */
+        .delete-btn {
+            background: var(--orange-accent) !important;
+            color: var(--matte-black) !important;
+        }
+
+        .delete-btn:hover {
+            background: var(--orange-hover) !important;
+            color: var(--matte-black) !important;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* Button press effect */
+        .calc-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .calc-button:hover::before {
+            opacity: 1;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* Matte texture overlay */
+        .calc-button::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* Footer */
+        .footer {
+            background: rgba(20, 20, 20, 0.98) !important;
+            backdrop-filter: blur(20px);
+            border-top: 1px solid var(--dark-matte) !important;
+        }
+
+        .copyright {
+            color: var(--text-muted) !important;
+        }
+
+        .separator {
+            color: var(--cyan-accent) !important;
+            opacity: 0.6;
+        }
+
+        .footer {
+            background: rgba(20, 20, 20, 0.98) !important;
+            backdrop-filter: blur(20px);
+            border-top: 1px solid var(--dark-matte) !important;
+        }
+
+        .copyright {
+            color: var(--text-muted) !important;
+        }
+
+        .separator {
+            color: var(--cyan-accent) !important;
+            opacity: 0.6;
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+            .display-main {
+                font-size: 2.2rem;
+                min-height: 60px;
+            }
+
+            .calc-button {
+                height: 55px;
+                font-size: 1.1rem;
+            }
+
+            .equals-btn {
+                font-size: 1.2rem !important;
+            }
+        }
+
+        /* ------------------------------------------------------------------------------------------------ */
+        /* Subtle glow effects */
+        .calculator-container::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--cyan-accent), transparent, var(--cyan-accent));
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0.1;
+        }
